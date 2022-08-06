@@ -35,6 +35,16 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+    <string>Streampops needs camera access to capture and personalize your homepage with a photo</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Streampops needs micro phone access in order to use camera</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Streampops needs photo library access to download and save in library</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Streampops needs photo library access to capture and personalize your homepage with a photo</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Streampops needs your identifier to provide you with quality matches</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
