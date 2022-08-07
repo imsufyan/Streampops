@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
     },
     breakingNewsText: {
         fontSize: 13,
-        color: Colors.appGray
+        color: Colors.appGray,
+        marginVertical: 10,
     },
     searchWatchingText: {
         color: Colors.appText,

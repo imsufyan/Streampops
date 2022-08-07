@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, SafeAreaView, Image, TouchableOpacity, ScrollView, TextInput, Dimensions } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { BackIcon, SearchIcon, AudioIcon, DownIcon, StarIcon, BreakingIcon , HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, HobbitBanner, BreakingNews } from '../../assets'
+import { BackIcon, SearchIcon, AudioIcon, DownIcon, StarIcon, BreakingIcon, HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, HobbitBanner, BreakingNews } from '../../assets'
 import { Colors } from '../../utils/Colors';
 import InputField from '../../components/InputField'
 import styles from './styles';
@@ -62,7 +62,7 @@ export default SearchScreen = ({ navigation }) => {
                         <Image source={DownIcon} style={styles.downIconStyle} />
                     </TouchableOpacity>
                 </LinearGradient>
-                <View style={{ backgroundColor: Colors.appBlack, paddingTop: 100 , marginHorizontal: 10}}>
+                <View style={{ backgroundColor: Colors.appBlack, paddingTop: 100, marginHorizontal: 10 }}>
                     <Image source={HobbitBanner} style={styles.hobbitBannerImage} />
                     <View style={styles.movieDescriptionView}>
                         <View style={styles.recomendedTextRow}>
@@ -72,10 +72,10 @@ export default SearchScreen = ({ navigation }) => {
                         <Text style={styles.movieDescriptionText}>{`A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.`}</Text>
                     </View>
                 </View>
-                <View style={{marginHorizontal: 10}}>
+                <View style={{ marginHorizontal: 10 }}>
                     <View style={{
                         flexDirection: 'row',
-                        margin: 20,
+                        marginTop: 10,
                         alignItems: "center"
                     }}>
                         <Text style={styles.breakingNewsText}>{`Breaking news`}</Text>
@@ -87,7 +87,7 @@ export default SearchScreen = ({ navigation }) => {
                         backgroundColor: Colors.white,
                         borderRadius: 10
                     }}>
-                        <View style={{flex: 1}}>
+                        <View style={{ flex: 1 }}>
                             <Text>{`https://rollingstone.uol.com.br › harr...`}</Text>
                             <Text style={{
                                 color: Colors.blue,
