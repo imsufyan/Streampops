@@ -60,7 +60,6 @@ const styles = StyleSheet.create({
     profileView: {
         width: responsiveWidth(94),
         alignSelf: "center",
-        height: responsiveHeight(40),
         backgroundColor: Colors.appText,
         borderRadius: 10,
         padding: 10

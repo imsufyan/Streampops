@@ -30,7 +30,7 @@ export default UserProfileScreen = ({ navigation }) => {
                     <Image source={SearchIcon} style={styles.backIconStyle} />
                 </TouchableOpacity>
             </View>
-            <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+            <ScrollView contentContainerStyle={{ flexGrow: 1, paddingBottom: 10 }}>
                 <View style={styles.profileView}>
                     <View style={styles.profileImageView}>
                         <View style={styles.imageView}>
