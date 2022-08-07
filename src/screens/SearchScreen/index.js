@@ -2,7 +2,7 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, SafeAreaView, Image, TouchableOpacity, ScrollView, TextInput, Dimensions } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { BackIcon, SearchIcon, AudioIcon, DownIcon, StarIcon, HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, HobbitBanner } from '../../assets'
+import { BackIcon, SearchIcon, AudioIcon, DownIcon, StarIcon, BreakingIcon , HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, HobbitBanner, BreakingNews } from '../../assets'
 import { Colors } from '../../utils/Colors';
 import InputField from '../../components/InputField'
 import styles from './styles';
@@ -31,7 +31,7 @@ export default SearchScreen = ({ navigation }) => {
             </View>
             <ScrollView
                 ref={scrollViewRef}
-                contentContainerStyle={{ flexGrow: 1 , paddingBottom:30}}
+                contentContainerStyle={{ flexGrow: 1, paddingBottom: 30 }}
                 showsVerticalScrollIndicator={false}
             >
                 <LinearGradient
@@ -62,19 +62,44 @@ export default SearchScreen = ({ navigation }) => {
                         <Image source={DownIcon} style={styles.downIconStyle} />
                     </TouchableOpacity>
                 </LinearGradient>
-                <View style={{ backgroundColor: Colors.appBlack  , paddingTop: 100}}>
-                    <View>
-                        <Image source={HobbitBanner} style={styles.hobbitBannerImage} />
-                        <View style={{ backgroundColor: Colors.white }}>
-                            <View style={styles.recomendedTextRow}>
-                                <Text style={styles.recomendedText}>{`Recommended for you`}</Text>
-                                <Image source={StarIcon} style={styles.starIcon} />
-                            </View>
-                            <Text style={{color: Colors.appBlack , fontSize: 15 , paddingHorizontal: 20}}>{`A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.`}</Text>
+                <View style={{ backgroundColor: Colors.appBlack, paddingTop: 100 , marginHorizontal: 10}}>
+                    <Image source={HobbitBanner} style={styles.hobbitBannerImage} />
+                    <View style={styles.movieDescriptionView}>
+                        <View style={styles.recomendedTextRow}>
+                            <Text style={styles.recomendedText}>{`Recommended for you`}</Text>
+                            <Image source={StarIcon} style={styles.starIcon} />
                         </View>
+                        <Text style={styles.movieDescriptionText}>{`A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.`}</Text>
                     </View>
                 </View>
-
+                <View style={{marginHorizontal: 10}}>
+                    <View style={{
+                        flexDirection: 'row',
+                        margin: 20,
+                        alignItems: "center"
+                    }}>
+                        <Text style={styles.breakingNewsText}>{`Breaking news`}</Text>
+                        <Image source={BreakingIcon} style={styles.breakingIconStyle} />
+                    </View>
+                    <View style={{
+                        padding: 10,
+                        flexDirection: 'row',
+                        backgroundColor: Colors.white,
+                        borderRadius: 10
+                    }}>
+                        <View style={{flex: 1}}>
+                            <Text>{`https://rollingstone.uol.com.br › harr...`}</Text>
+                            <Text style={{
+                                color: Colors.blue,
+                                marginVertical: 10
+                            }}>{`Harry Potter: Emma Watson se obrigou a 'lembrar de atuar ...`}</Text>
+                            <Text style={{
+                                color: Colors.appBlack
+                            }}>{`Apr 8, 2022 — Emma Watson confessou ...`}</Text>
+                        </View>
+                        <Image source={BreakingNews} style={styles.breakingImageStyle} />
+                    </View>
+                </View>
             </ScrollView>
         </View>
     )

@@ -10,6 +10,8 @@ import AudioIcon from './audioIcon.png';
 import DownIcon from './downIcon.png';
 import HobbitBanner from './hobbit_banner.png';
 import StarIcon from './starIcon.png';
+import BreakingNews from './breakingNews.png';
+import BreakingIcon from './breakingIcon.png';
 
 
 export {
@@ -25,4 +27,6 @@ export {
   DownIcon,
   HobbitBanner,
   StarIcon,
+  BreakingNews,
+  BreakingIcon,
 };

@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar, Platform } from 'react-native';
+import { StyleSheet, StatusBar } from 'react-native';
 import {
     responsiveHeight,
     responsiveWidth,
@@ -10,16 +10,14 @@ import { Colors } from '../../utils/Colors';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.appBlack
+        backgroundColor: Colors.appBlack,
     },
     headerContainer: {
         flexDirection: "row",
-        height: Platform.OS == 'ios' ? responsiveHeight(8.7) + 30 : responsiveHeight(8.7),
-        paddingTop: 30,
+        height: responsiveHeight(8.7),
         justifyContent: "space-between",
         alignItems: "center",
-        paddingHorizontal: responsiveWidth(3),
-
+        paddingHorizontal: responsiveWidth(3)
     },
     changeImageView: {
         backgroundColor: Colors.blueLight,
@@ -44,53 +42,7 @@ const styles = StyleSheet.create({
     titleStyle: {
         fontSize: 17,
         color: Colors.appText,
-        fontWeight: "bold"
-    },
-    rightTextStyle: {
-        fontSize: 17,
-        color: Colors.appText,
-    },
-    movieDescriptionView: {
-        backgroundColor: Colors.white,
-        borderBottomLeftRadius: 10,
-        borderBottomRightRadius: 10,
-        paddingBottom: 20
-    },
-    movieDescriptionText: {
-        color: Colors.appBlack,
-        fontSize: 15,
-        paddingHorizontal: 20,
-        lineHeight: 25
-    },
-    breakingNewsText: {
-        fontSize: 13,
-        color: Colors.appGray
-    },
-    searchWatchingText: {
-        color: Colors.appText,
-        textAlign: "center",
-        fontSize: 20,
-        marginTop: responsiveHeight(20)
-    },
-    breakingImageStyle: {
-        resizeMode: 'contain',
-        width: 100,
-        height: 100
-    },
-    breakingIconStyle: {
-        width: 20,
-        height: 20,
-        resizeMode: 'contain',
-        marginLeft: 10
-    },
-    listenWatchingText: {
-        color: Colors.appText,
-        textAlign: "center",
-        fontSize: 20,
-    },
-    rowViewInput: {
-        flexDirection: 'row',
-        margin: 30
+        marginLeft: responsiveWidth(3)
     },
     profileTitleStyle: {
         fontSize: 15,
@@ -98,8 +50,9 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     rightView: {
-        // width: responsiveWidth(10),
-        // height: responsiveHeight(5),
+        width: responsiveWidth(10),
+        height: responsiveHeight(5),
+        backgroundColor: Colors.appBlue,
         alignSelf: 'center',
         borderRadius: 10,
         alignItems: "center"
@@ -174,49 +127,10 @@ const styles = StyleSheet.create({
     },
     saveButtonStyle: {
         backgroundColor: Colors.appBlue,
-        width: 40,
+        width: 60,
         height: 40,
         borderRadius: 5,
         justifyContent: 'center',
-        alignItems: "center",
-        marginLeft: 10
-    },
-    audioButtonStyle: {
-        backgroundColor: Colors.appBlue,
-        width: 64,
-        height: 64,
-        borderRadius: 10,
-        justifyContent: 'center',
-        alignItems: "center",
-        marginLeft: 10,
-        alignSelf: 'center',
-        marginTop: 30
-    },
-    downIconStyle: {
-        width: 60,
-        height: 40,
-        resizeMode: 'contain',
-        alignSelf: 'center'
-    },
-    recomendedTextRow: {
-        flexDirection: "row",
-        marginLeft: 20,
-        marginVertical: 20,
-    },
-    starIcon: {
-        width: 20,
-        height: 20,
-        resizeMode: "contain",
-        marginLeft: 10
-    },
-    recomendedText: {
-        color: Colors.appGray,
-        fontSize: 15
-    },
-    hobbitBannerImage: {
-        width: '100%',
-        height: 350,
-        resizeMode: 'cover'
     },
     saveText: {
         fontSize: 15,
@@ -225,10 +139,10 @@ const styles = StyleSheet.create({
     },
     inputStyle: {
         height: 40,
-        backgroundColor: Colors.white,
-        flex: 1,
-        borderRadius: 10,
-        paddingLeft: 10
+        borderWidth: 1,
+        justifyContent: "center",
+        paddingHorizontal: 10,
+        borderRadius: 5
     },
     absoluteView: {
         position: "absolute",

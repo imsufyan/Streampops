@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import UserProfileScreen from '../screens/UserProfileScreen'
 import EditProfileScreen from '../screens/EditProfileScreen'
 import SearchScreen from '../screens/SearchScreen'
+import LiveStreamingScreen from '../screens/LiveStreamingScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,11 @@ const HomeStack = () => {
         name={'SearchScreen'}
         options={{ headerShown: false }}
         component={SearchScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'LiveStreamingScreen'}
+        options={{ headerShown: false }}
+        component={LiveStreamingScreen}>
       </Stack.Screen>
     </Stack.Navigator>
   );
