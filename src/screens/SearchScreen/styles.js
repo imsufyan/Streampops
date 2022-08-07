@@ -251,11 +251,12 @@ const styles = StyleSheet.create({
         width: 12,
         height: 12,
         resizeMode: "contain",
-        marginLeft: 10
+        marginLeft: 10,
+        alignSelf: 'center'
     },
     popularCommentsView: {
         flexDirection: "row",
-        margin: 10,
+        marginTop: 10,
         alignItems: "center"
     },
     commentsContainer: {
