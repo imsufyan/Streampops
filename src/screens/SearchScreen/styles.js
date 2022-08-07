@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import { StyleSheet, StatusBar,Platform } from 'react-native';
 import {
     responsiveHeight,
     responsiveWidth,
@@ -10,14 +10,26 @@ import { Colors } from '../../utils/Colors';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.appBlack,
+        backgroundColor: Colors.appBlack
     },
     headerContainer: {
         flexDirection: "row",
-        height: responsiveHeight(8.7),
+        height:Platform.OS == 'ios' ?  responsiveHeight(8.7) + 30 : responsiveHeight(8.7),
+        paddingTop: 30,
         justifyContent: "space-between",
         alignItems: "center",
-        paddingHorizontal: responsiveWidth(3)
+        paddingHorizontal: responsiveWidth(3),
+
+    },
+    changeImageView: {
+        backgroundColor: Colors.blueLight,
+        padding: 8,
+        borderRadius: 5,
+        marginTop: 10
+    },
+    changeImageText: {
+        fontSize: 15,
+        color: Colors.blue
     },
     leftView: {
         flexDirection: "row",
@@ -32,7 +44,26 @@ const styles = StyleSheet.create({
     titleStyle: {
         fontSize: 17,
         color: Colors.appText,
-        marginLeft: responsiveWidth(3)
+        fontWeight: "bold"
+    },
+    rightTextStyle: {
+        fontSize: 17,
+        color: Colors.appText,
+    },
+    searchWatchingText: {
+        color: Colors.appText,
+        textAlign: "center",
+        fontSize: 20,
+        marginTop: responsiveHeight(20)
+    },
+    listenWatchingText: {
+        color: Colors.appText,
+        textAlign: "center",
+        fontSize: 20,
+    },
+    rowViewInput: {
+        flexDirection: 'row',
+        margin: 30
     },
     profileTitleStyle: {
         fontSize: 15,
@@ -40,9 +71,8 @@ const styles = StyleSheet.create({
         marginTop: 5
     },
     rightView: {
-        width: responsiveWidth(10),
-        height: responsiveHeight(5),
-        backgroundColor: Colors.appBlue,
+        // width: responsiveWidth(10),
+        // height: responsiveHeight(5),
         alignSelf: 'center',
         borderRadius: 10,
         alignItems: "center"
@@ -50,7 +80,7 @@ const styles = StyleSheet.create({
     profileView: {
         width: responsiveWidth(94),
         alignSelf: "center",
-        height: responsiveHeight(25),
+        height: responsiveHeight(40),
         backgroundColor: Colors.appText,
         borderRadius: 10,
         padding: 10
@@ -96,19 +126,94 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     interestHeading: {
-        fontWeight: 'bold',
         fontSize: 15,
-        color: Colors.appBlack
+        color: Colors.appGray
     },
     interestListView: {
         padding: 5,
         backgroundColor: Colors.lightGray,
         marginRight: 5,
+        borderRadius: 5,
+        flexDirection: "row",
+        top: 5,
+        marginLeft: 5
+    },
+    interestsView: {
+        borderWidth: 1,
+        borderColor: Colors.appGray,
+        height: 50,
+        marginVertical: 10,
         borderRadius: 5
+    },
+    saveButtonStyle: {
+        backgroundColor: Colors.appBlue,
+        width: 40,
+        height: 40,
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: "center",
+        marginLeft: 10
+    },
+    audioButtonStyle: {
+        backgroundColor: Colors.appBlue,
+        width: 64,
+        height: 64,
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: "center",
+        marginLeft: 10,
+        alignSelf: 'center',
+        marginTop: 30
+    },
+    downIconStyle: {
+        width: 60,
+        height: 40,
+        resizeMode: 'contain',
+        alignSelf: 'center'
+    },
+    recomendedTextRow: {
+        flexDirection: "row",
+        marginLeft: 20,
+        marginVertical: 20,
+    },
+    starIcon: {
+        width: 20,
+        height: 20,
+        resizeMode: "contain",
+        marginLeft: 10
+    },
+    recomendedText: {
+        color: Colors.appGray,
+        fontSize: 15
+    },
+    hobbitBannerImage: {
+        width: '100%',
+        height: 350,
+        resizeMode: 'cover'
+    },
+    saveText: {
+        fontSize: 15,
+        color: Colors.appText,
+        textAlign: "center"
+    },
+    inputStyle: {
+        height: 40,
+        backgroundColor: Colors.white,
+        flex: 1,
+        borderRadius: 10,
+        paddingLeft: 10
+    },
+    absoluteView: {
+        position: "absolute",
+        zIndex: 1,
+        top: -10,
+        backgroundColor: "#FFFFFF",
+        paddingHorizontal: 10,
+        left: 10
     },
     interestListStyle: {
         flexDirection: "row",
-        marginTop: 5
+        marginTop: 5,
     },
     popularCommentsText: {
         color: Colors.appGray,
@@ -142,7 +247,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     rowView: {
-        flexDirection: "row", 
+        flexDirection: "row",
         justifyContent: "space-between"
     },
     HeartWithoutFillIcon: {

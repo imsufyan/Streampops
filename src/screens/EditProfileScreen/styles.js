@@ -19,6 +19,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingHorizontal: responsiveWidth(3)
     },
+    changeImageView: {
+        backgroundColor: Colors.blueLight,
+        padding: 8,
+        borderRadius: 5,
+        marginTop: 10
+    },
+    changeImageText: {
+        fontSize: 15,
+        color: Colors.blue
+    },
     leftView: {
         flexDirection: "row",
         flex: 1,
@@ -50,7 +60,7 @@ const styles = StyleSheet.create({
     profileView: {
         width: responsiveWidth(94),
         alignSelf: "center",
-        height: responsiveHeight(25),
+        height: responsiveHeight(40),
         backgroundColor: Colors.appText,
         borderRadius: 10,
         padding: 10
@@ -96,19 +106,55 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     interestHeading: {
-        fontWeight: 'bold',
         fontSize: 15,
-        color: Colors.appBlack
+        color: Colors.appGray
     },
     interestListView: {
         padding: 5,
         backgroundColor: Colors.lightGray,
         marginRight: 5,
+        borderRadius: 5,
+        flexDirection: "row",
+        top: 5,
+        marginLeft: 5
+    },
+    interestsView: {
+        borderWidth: 1,
+        borderColor: Colors.appGray,
+        height: 50,
+        marginVertical: 10,
         borderRadius: 5
+    },
+    saveButtonStyle: {
+        backgroundColor: Colors.appBlue,
+        width: 60,
+        height: 40,
+        borderRadius: 5,
+        justifyContent: 'center',
+    },
+    saveText: {
+        fontSize: 15,
+        color: Colors.appText,
+        textAlign: "center"
+    },
+    inputStyle: {
+        height: 40,
+        borderWidth: 1,
+        justifyContent: "center",
+        paddingHorizontal: 10,
+        borderRadius: 5
+    },
+    absoluteView: {
+        position: "absolute",
+        zIndex: 1,
+        top: -10,
+        backgroundColor: "#FFFFFF",
+        paddingHorizontal: 10,
+        left: 10
     },
     interestListStyle: {
         flexDirection: "row",
-        marginTop: 5
+        marginTop: 5,
     },
     popularCommentsText: {
         color: Colors.appGray,
@@ -142,7 +188,7 @@ const styles = StyleSheet.create({
         resizeMode: 'contain'
     },
     rowView: {
-        flexDirection: "row", 
+        flexDirection: "row",
         justifyContent: "space-between"
     },
     HeartWithoutFillIcon: {

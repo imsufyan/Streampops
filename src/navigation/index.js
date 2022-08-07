@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 import UserProfileScreen from '../screens/UserProfileScreen'
+import EditProfileScreen from '../screens/EditProfileScreen'
+import SearchScreen from '../screens/SearchScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +24,16 @@ const HomeStack = () => {
         name={'UserProfileScreen'}
         options={{ headerShown: false }}
         component={UserProfileScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'EditProfileScreen'}
+        options={{ headerShown: false }}
+        component={EditProfileScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'SearchScreen'}
+        options={{ headerShown: false }}
+        component={SearchScreen}>
       </Stack.Screen>
     </Stack.Navigator>
   );
