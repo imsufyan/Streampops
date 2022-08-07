@@ -2,13 +2,14 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, SafeAreaView, Image, TouchableOpacity, ScrollView, TextInput, Dimensions } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import { BackIcon, SearchIcon, AudioIcon, DownIcon, StarIcon, BreakingIcon, HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, HobbitBanner, BreakingNews } from '../../assets'
+import { BackIcon, SearchIcon, AudioIcon, DownIcon, StarIcon, BreakingIcon, HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, HobbitBanner, BreakingNews, ImageBackgroundSecond } from '../../assets'
 import { Colors } from '../../utils/Colors';
 import InputField from '../../components/InputField'
 import styles from './styles';
 import { responsiveHeight } from 'react-native-responsive-dimensions';
 
 const { width, height } = Dimensions.get('window');
+var _scrollToBottomY = 0
 
 export default SearchScreen = ({ navigation }) => {
 
@@ -16,6 +17,7 @@ export default SearchScreen = ({ navigation }) => {
     const [videoList, setVideoList] = useState([
         { type: 'movie', image: HobbitBanner, tagline: 'Recomended for you', name: 'The Hobbit', movieDescription: 'A reluctant Hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home, and the gold within it from the dragon Smaug.' },
         { type: 'news', },
+        { type: 'movie', image: ImageBackgroundSecond, tagline: 'Popular movie', name: 'Non Stop', movieDescription: 'An air marshal springs into action during a transatlantic flight after receiving a series of text messages demanding $150 million into an off-shore account, or someone will die every 20 minutes.' },
         { type: 'comments', name: 'The Hobbit', userName: 'Maria', comment: 'what is going on here', like: '25', message: '33' },
         { type: 'comments', name: 'Harry Potter and the Philosopher Stone', userName: 'Carlos', comment: 'This scene always makes me hungry', like: '5', message: '2' }
     ]);
@@ -37,6 +39,9 @@ export default SearchScreen = ({ navigation }) => {
             </View>
             <ScrollView
                 ref={scrollViewRef}
+                onContentSizeChange={(contentWidth, contentHeight) => {
+                    _scrollToBottomY = contentHeight;
+                }}
                 contentContainerStyle={{ flexGrow: 1, paddingBottom: 30 }}
                 showsVerticalScrollIndicator={false}
             >
@@ -61,18 +66,17 @@ export default SearchScreen = ({ navigation }) => {
 
                     <TouchableOpacity
                         onPress={() => {
-                            setShowBottomView(!showBottomView);
                             scrollViewRef?.current.scrollToEnd({ animated: true });
                         }}
                         style={{ alignSelf: "center", position: "absolute", bottom: 50 }}>
                         <Image source={DownIcon} style={styles.downIconStyle} />
                     </TouchableOpacity>
                 </LinearGradient>
-                <View style={{ paddingTop: 100, backgroundColor: Colors.appBlack, marginHorizontal: 10}}>
+                <View style={{ paddingTop: 100, backgroundColor: Colors.appBlack, marginHorizontal: 10 }}>
                     {videoList.map((item, index) => {
                         return (
                             item.type == 'movie' ?
-                                <View style={{}}>
+                                <View style={{ marginTop: 10 }}>
                                     <Image source={HobbitBanner} style={styles.hobbitBannerImage} />
                                     <View style={styles.movieDescriptionView}>
                                         <View style={styles.recomendedTextRow}>
@@ -108,7 +112,9 @@ export default SearchScreen = ({ navigation }) => {
                                         </View>
                                     </>
                                     :
-                                    <>
+                                    <TouchableOpacity onPress={() => {
+                                        navigation.navigate('LiveStreamingScreen')
+                                    }}>
                                         <View style={styles.popularCommentsView}>
                                             <Text style={styles.popularCommentsText}>{`Popular comments`}</Text>
                                             <Image source={HeartIcon} style={styles.heartIconStyle} />
@@ -140,10 +146,17 @@ export default SearchScreen = ({ navigation }) => {
                                                 </View>
                                             </View>
                                         </View>
-                                    </>
+                                    </TouchableOpacity>
                         )
                     })}
                 </View>
+                <TouchableOpacity
+                    onPress={() => {
+                        scrollViewRef?.current.scrollTo(_scrollToBottomY);
+                    }}
+                    style={{ alignSelf: "center" }}>
+                    <Image source={DownIcon} style={[styles.upIconStyle]} />
+                </TouchableOpacity>
             </ScrollView>
         </View>
     )

@@ -199,6 +199,13 @@ const styles = StyleSheet.create({
         resizeMode: 'contain',
         alignSelf: 'center'
     },
+    upIconStyle: {
+        width: 60,
+        height: 40,
+        resizeMode: 'contain',
+        alignSelf: 'center',
+        transform: [{ rotate: '180deg' }]
+    },
     recomendedTextRow: {
         flexDirection: "row",
         marginLeft: 20,

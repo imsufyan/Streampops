@@ -57,6 +57,39 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignItems: "center"
     },
+    sendButton: {
+        height: 40,
+        alignItems: 'center',
+        backgroundColor: Colors.blue,
+        width: 40,
+        borderRadius: 5,
+        marginLeft: 10,
+        justifyContent: "center"
+    },
+    inputStyles: {
+        fontSize: 13,
+        color: Colors.appGray,
+        flex: 1,
+        backgroundColor: Colors.appText,
+        borderRadius: 10,
+        height: 40,
+        alignItems: "center",
+        paddingHorizontal: 10
+    },
+    inputMainContainer: {
+        width: '100%',
+        flexDirection: 'row',
+        paddingHorizontal: 10,
+    },
+    inputContainer: {
+        
+    },
+    breakingImageStyle: {
+        resizeMode: 'contain',
+        width: 20,
+        height: 20,
+        alignSelf: "center"
+    },
     profileView: {
         width: responsiveWidth(94),
         alignSelf: "center",
