@@ -16,7 +16,7 @@ import FirstPlaceholder from './1_placeholder.png';
 import SecondPlaceholder from './2_placeholder.png';
 import ThirdPlaceholder from './3_placeholder.png';
 import HomeIcon from './homeIcon.png';
-import ImageBackground2 from './image_background2.png';
+import ImageBackground2 from './image_backGround2.png';
 import SendIcon from './sendIcon.png';
 import SortingIcon from './sortingIcon.png';
 
