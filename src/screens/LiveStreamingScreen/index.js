@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react';
 import { View, Text, SafeAreaView, Image, TouchableOpacity, ScrollView, KeyboardAvoidingView, TextInput, Platform, Pressable, FlatList } from 'react-native';
-import { BackIcon, SearchIcon, ProfileImage, SettingIcon, HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, SendIcon } from '../../assets'
+import { BackIcon, SearchIcon, ProfileImage, SettingIcon, HeartIcon, ExpandIcon, HeartWithoutFillIcon, MessageIcon, SendIcon, SortingIcon, HomeIcon } from '../../assets'
 import { Colors } from '../../utils/Colors';
-import InputField from '../../components/InputField'
+import InputField from '../../components/InputField';
 import styles from './styles';
+import ChatHeader from "../../components/ChatHeader";
 
 
 export default LiveStreamingScreen = ({ navigation }) => {
@@ -67,7 +68,11 @@ export default LiveStreamingScreen = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-
+            <ChatHeader
+                singleLeftIcon={HomeIcon}
+                rightIcon={SortingIcon}
+                backIconPress={() => { navigation.goBack() }}
+            />
             <View style={{ flex: 1 }}>
 
                 {<View style={{ backgroundColor: Colors.white, flex: 1, margin: 10, borderRadius: 10 }}>

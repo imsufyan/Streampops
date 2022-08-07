@@ -69,11 +69,11 @@ export default EditProfileScreen = ({ navigation }) => {
                         }
                     </View>
                 </View>
-                <TouchableOpacity style={styles.saveButtonStyle}>
+                <TouchableOpacity style={styles.saveButtonStyle} onPress={() => navigation.navigate("MovieMenueScreen")}>
                     <Text style={styles.saveText}>{`Save`}</Text>
                 </TouchableOpacity>
             </View>
-        </SafeAreaView>
+        </SafeAreaView >
     )
 
 }

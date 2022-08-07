@@ -76,7 +76,7 @@ export default SearchScreen = ({ navigation }) => {
                     {videoList.map((item, index) => {
                         return (
                             item.type == 'movie' ?
-                                <View style={{ marginTop: 10 }}>
+                                <TouchableOpacity style={{ marginTop: 10 }} onPress={() => navigation.navigate("MovieMenueScreen")}>
                                     <Image source={HobbitBanner} style={styles.hobbitBannerImage} />
                                     <View style={styles.movieDescriptionView}>
                                         <View style={styles.recomendedTextRow}>
@@ -85,7 +85,7 @@ export default SearchScreen = ({ navigation }) => {
                                         </View>
                                         <Text style={styles.movieDescriptionText}>{`${item.movieDescription}`}</Text>
                                     </View>
-                                </View>
+                                </TouchableOpacity>
                                 : item.type == 'news' ?
                                     <>
                                         <View style={styles.popularCommentsView}>

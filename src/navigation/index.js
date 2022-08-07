@@ -4,10 +4,11 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
 
-import UserProfileScreen from '../screens/UserProfileScreen'
-import EditProfileScreen from '../screens/EditProfileScreen'
-import SearchScreen from '../screens/SearchScreen'
-import LiveStreamingScreen from '../screens/LiveStreamingScreen'
+import UserProfileScreen from '../screens/UserProfileScreen';
+import EditProfileScreen from '../screens/EditProfileScreen';
+import SearchScreen from '../screens/SearchScreen';
+import LiveStreamingScreen from '../screens/LiveStreamingScreen';
+import MovieMenueScreen from '../screens/MovieMenueScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,11 @@ const HomeStack = () => {
         name={'LiveStreamingScreen'}
         options={{ headerShown: false }}
         component={LiveStreamingScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'MovieMenueScreen'}
+        options={{ headerShown: false }}
+        component={MovieMenueScreen}>
       </Stack.Screen>
     </Stack.Navigator>
   );
