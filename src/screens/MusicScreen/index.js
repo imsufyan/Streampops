@@ -45,7 +45,7 @@ export default MusicScreen = ({ navigation }) => {
                     return (
                         <TouchableOpacity
                             onPress={() => {
-                                setShowScript(true)
+                                // setShowScript(true)
                             }}
                             style={styles.scriptListView}>
                             <>
