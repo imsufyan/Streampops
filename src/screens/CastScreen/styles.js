@@ -10,7 +10,7 @@ import { Colors } from '../../utils/Colors';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.appGray,
+        backgroundColor: Colors.darkBlack,
     },
     headerContainer: {
         flexDirection: "row",
@@ -18,6 +18,40 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         alignItems: "center",
         paddingHorizontal: responsiveWidth(3)
+    },
+    profileInnerOptions: {
+        flexDirection: 'row', 
+        width: '80%', 
+        alignSelf: "center", 
+        height: 40, 
+        justifyContent: 'center', 
+        alignItems: "center"
+    },
+    twitterTitle: {
+        fontSize: 13,
+        color: Colors.appBlack,
+        fontWeight: 'bold',
+    },
+    instaPhot: {
+        width: '100%',
+        height: 300,
+        resizeMode: "contain"
+    },
+    twitterIcon: {
+        width :20,
+        height: 20,
+        resizeMode: "contain"
+    },
+    twitterId: {
+        fontSize: 13,
+        color: Colors.appGray,
+        fontWeight: 'bold',
+        marginLeft: 10
+    },
+    twitterThumb: {
+        width: 30,
+        height: 30,
+        resizeMode: "contain",
     },
     changeImageView: {
         backgroundColor: Colors.blueLight,

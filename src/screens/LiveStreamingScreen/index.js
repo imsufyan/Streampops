@@ -58,7 +58,7 @@ export default LiveStreamingScreen = ({ navigation }) => {
                 onEndReached={() => { }}
                 ItemSeparatorComponent={() => {
                     return (
-                        <View style={{ borderWidth: 1 }}></View>
+                        <View style={{ borderWidth: 0.5, borderColor: Colors.lineSeparator }}></View>
                     )
                 }}
                 renderItem={_renderItem}
@@ -80,7 +80,7 @@ export default LiveStreamingScreen = ({ navigation }) => {
                 </View>}
                 <KeyboardAvoidingView
                     behavior={Platform.OS == "ios" ? "padding" : "height"}
-                    keyboardVerticalOffset={50}
+                    keyboardVerticalOffset={120}
                     style={{ width: '100%', marginBottom: 30 }}>
                     <View style={styles.inputMainContainer}>
                         <TextInput

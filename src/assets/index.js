@@ -19,6 +19,9 @@ import HomeIcon from './homeIcon.png';
 import ImageBackgroundSecond from './imageBackGroundSecond.png';
 import SendIcon from './sendIcon.png';
 import SortingIcon from './sortingIcon.png';
+import TwitterThumb from './twitter_thumb.png';
+import TwitterIcon from './twitter_icon.png';
+import ProfileInstagram from './profile_instagram.png';
 
 
 export {
@@ -43,4 +46,7 @@ export {
   ImageBackgroundSecond,
   SendIcon,
   SortingIcon,
+  ProfileInstagram,
+  TwitterIcon,
+  TwitterThumb
 };

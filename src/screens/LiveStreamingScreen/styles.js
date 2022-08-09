@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import { StyleSheet, StatusBar , Platform } from 'react-native';
 import {
     responsiveHeight,
     responsiveWidth,
@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.appGray,
+        paddingTop: Platform.OS == 'ios' ? 44 : 0
     },
     headerContainer: {
         flexDirection: "row",

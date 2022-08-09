@@ -19,11 +19,11 @@ export default MovieMenueScreen = ({ navigation }) => {
                 rightIcon={SortingIcon}
                 backIconPress={() => { navigation.goBack() }}
             />
-            <View style={{ flex: 1, backgroundColor: Colors.white, borderRadius: 16 }}>
+            <View style={{ flex: 1, backgroundColor: Colors.appBlack, borderRadius: 16 }}>
                 <Tab.Navigator
                     screenOptions={{
-                        tabBarLabelStyle: { fontSize: 12, fontWeight: "400", color: Colors.white, backgroundColor: Colors.appGray, paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 },
-                        tabBarStyle: { backgroundColor: Colors.appBlack },
+                        tabBarLabelStyle: { fontSize: 12, fontWeight: "400", color: Colors.white, backgroundColor: Colors.appBlack, paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 },
+                        tabBarStyle: { backgroundColor: Colors.appBlack, },
                         tabBarIndicatorStyle: { backgroundColor: Colors.white, height: 1, borderColor: Colors.white },
                         tabBarScrollEnabled: true,
                         tabBarItemStyle: { width: 85, padding: 0 }

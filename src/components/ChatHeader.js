@@ -10,7 +10,7 @@ const ChatHeader = (props) => {
     const [value, setValue] = useState("");
     const [items, setItems] = useState([]);
     return (
-        <View style={[{ height: 60, width: "100%", flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 17, backgroundColor: Colors.appGray,alignItems:"center" }, props.containerStyle]}>
+        <View style={[{ height: 60, width: "100%", flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 17, backgroundColor: Colors.appBlack,alignItems:"center" }, props.containerStyle]}>
             {
                 !_.isNil(props.singleLeftIcon) &&
                 <TouchableOpacity style={[{ justifyContent: "center", alignItems: "flex-start", height: "100%", paddingRight: 20 }, props.leftViewStyle]}

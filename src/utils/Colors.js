@@ -8,4 +8,6 @@ export const Colors = {
     white: '#FFFFFF',
     blue: '#0077E5',
     blueLight: '#F0F6FB',
+    lineSeparator: '#E6E6E6',
+    darkBlack: '#131313',
 }
