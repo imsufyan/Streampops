@@ -19,6 +19,14 @@ const styles = StyleSheet.create({
         alignItems: "center",
         paddingHorizontal: responsiveWidth(3)
     },
+    scriptListView: {
+        backgroundColor: Colors.white,
+        height: 87,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginVertical: 5,
+        borderRadius: 10
+    },
     profileInnerOptions: {
         flexDirection: 'row',
         width: '80%',

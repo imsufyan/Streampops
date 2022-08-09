@@ -7,7 +7,10 @@ import InputField from '../../components/InputField'
 import styles from './styles';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import CastScreen from '../CastScreen';
+import SocialScreen from '../SocialScreen';
 import ChatHeader from "../../components/ChatHeader";
+import ScriptScreen from "../ScriptScreen";
+import MusicScreen from "../MusicScreen";
 
 const Tab = createMaterialTopTabNavigator();
 export default MovieMenueScreen = ({ navigation }) => {
@@ -40,20 +43,20 @@ export default MovieMenueScreen = ({ navigation }) => {
 
                     />
                     <Tab.Screen
-                        name="Social"
-                        component={CastScreen}
+                        name="SocialScreen"
+                        component={SocialScreen}
                         options={{ tabBarLabel: "Social" }}
 
                     />
                     <Tab.Screen
-                        name="Script"
-                        component={CastScreen}
+                        name="ScriptScreen"
+                        component={ScriptScreen}
                         options={{ tabBarLabel: "Script" }}
 
                     />
                     <Tab.Screen
-                        name="Music"
-                        component={CastScreen}
+                        name="MusicScreen"
+                        component={MusicScreen}
                         options={{ tabBarLabel: "Music" }}
 
                     />

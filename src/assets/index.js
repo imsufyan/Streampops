@@ -22,6 +22,11 @@ import SortingIcon from './sortingIcon.png';
 import TwitterThumb from './twitter_thumb.png';
 import TwitterIcon from './twitter_icon.png';
 import ProfileInstagram from './profile_instagram.png';
+import NewsImage from './newsImage.png';
+import SocialPhoto from './social_photo.png';
+import SingerImage1 from './singerImage1.png';
+import SingerImage2 from './singerImage2.png';
+import MusicAudioIcon from './musicAudioIcon.png';
 
 
 export {
@@ -48,5 +53,10 @@ export {
   SortingIcon,
   ProfileInstagram,
   TwitterIcon,
-  TwitterThumb
+  TwitterThumb,
+  NewsImage,
+  SocialPhoto,
+  MusicAudioIcon,
+  SingerImage1,
+  SingerImage2,
 };

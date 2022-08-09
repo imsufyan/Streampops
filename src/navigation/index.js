@@ -9,6 +9,9 @@ import EditProfileScreen from '../screens/EditProfileScreen';
 import SearchScreen from '../screens/SearchScreen';
 import LiveStreamingScreen from '../screens/LiveStreamingScreen';
 import MovieMenueScreen from '../screens/MovieMenueScreen';
+import SocialScreen from '../screens/SocialScreen';
+import ScriptScreen from '../screens/ScriptScreen';
+import MusicScreen from '../screens/MusicScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +49,21 @@ const HomeStack = () => {
         name={'MovieMenueScreen'}
         options={{ headerShown: false }}
         component={MovieMenueScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'SocialScreen'}
+        options={{ headerShown: false }}
+        component={SocialScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'ScriptScreen'}
+        options={{ headerShown: false }}
+        component={ScriptScreen}>
+      </Stack.Screen>
+      <Stack.Screen
+        name={'MusicScreen'}
+        options={{ headerShown: false }}
+        component={MusicScreen}>
       </Stack.Screen>
     </Stack.Navigator>
   );

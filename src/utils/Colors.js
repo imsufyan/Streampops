@@ -10,4 +10,5 @@ export const Colors = {
     blueLight: '#F0F6FB',
     lineSeparator: '#E6E6E6',
     darkBlack: '#131313',
+    lightWhite: '#EDEDED',
 }

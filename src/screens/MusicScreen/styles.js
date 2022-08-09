@@ -27,6 +27,20 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: "center"
     },
+    musicImage: {
+        width: 56,
+        height: 56,
+        resizeMode: 'contain'
+    },
+    scriptListView: {
+        backgroundColor: Colors.white,
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginVertical: 5,
+        borderRadius: 10,
+        padding: 10,
+        flexDirection: "row"
+    },
     breakingIconStyle: {
         width: 20,
         height: 20,
